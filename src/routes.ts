@@ -1,4 +1,5 @@
 import { Router } from "express";
+import categoryController from "./modules/category/category.routes.js";
 
 const routes = Router();
 
@@ -7,5 +8,7 @@ routes.get("/teste", (request, response) => {
         message: "Endpoint de teste"
     });
 });
+
+routes.use("/categories", categoryController.create);
 
 export default routes;
