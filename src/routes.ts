@@ -1,5 +1,5 @@
 import { Router } from "express";
-import categoryController from "./modules/category/category.routes.js";
+import categoryRoutes from "./modules/category/category.routes.js";
 
 const routes = Router();
 
@@ -9,6 +9,6 @@ routes.get("/teste", (request, response) => {
     });
 });
 
-routes.use("/categories", categoryController.create);
+routes.use("/categories", categoryRoutes);
 
 export default routes;
