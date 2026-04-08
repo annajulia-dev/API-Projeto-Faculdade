@@ -5,6 +5,8 @@ const categoryRoutes = Router();
 
 categoryRoutes.post("/", categoryController.create);
 categoryRoutes.get("/", categoryController.get);
+categoryRoutes.get("/:id", categoryController.findById);
+categoryRoutes.delete("/:id", categoryController.delete);
 /*
     Parametro de Rota vs Query Params
     Rota -> Fazer parte da URL e identificar um recurso. get /categoria/1234 

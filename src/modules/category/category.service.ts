@@ -32,6 +32,14 @@ class CategoryService {
             runValidators: true,
         });
     }
+
+    public async findById(id: string){
+        return await Category.findById(id);
+    }
+
+    public async delete(id: string){
+        Category.findByIdAndDelete(id);
+    }
 }
 
 export default new CategoryService();
